@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+/* Customized scrollbar design for physical multiplex seat grid scrolling */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #09090b;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #FFB800;
+}
+
+/* Custom pop frame animation for selected seats */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.animate-pop {
+  animation: pop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Premium amber glow highlights */
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(255, 184, 0, 0.45);
+}
+
+/* Custom ticket-morph animation when selecting a seat */
+@keyframes ticket-morph {
+  0% {
+    transform: scale(0.8);
+  }
+  45% {
+    transform: scale(1.15);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-ticket-morph {
+  animation: ticket-morph 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Ticket shapes and cutouts */
+.ticket-shape {
+  position: relative;
+}
+
+.ticket-shape-selected-light {
+  background: radial-gradient(circle at 0% 50%, transparent 4px, #8C1D40 0) left / 51% 100% no-repeat,
+              radial-gradient(circle at 100% 50%, transparent 4px, #8C1D40 0) right / 51% 100% no-repeat !important;
+  border-color: transparent !important;
+}
+
+.ticket-shape-selected-dark {
+  background: radial-gradient(circle at 0% 50%, transparent 4px, #f59e0b 0) left / 51% 100% no-repeat,
+              radial-gradient(circle at 100% 50%, transparent 4px, #f59e0b 0) right / 51% 100% no-repeat !important;
+  border-color: transparent !important;
+}
+
+/* Crying seat shake animation */
+@keyframes crying-shake {
+  0%, 100% { transform: translateX(0); }
+  15%, 45%, 75% { transform: translateX(-2.5px); }
+  30%, 60%, 90% { transform: translateX(2.5px); }
+}
+
+.animate-crying-shake {
+  animation: crying-shake 0.35s ease-in-out infinite;
+}
+
+
+

@@ -1,0 +1,6 @@
+{
+  "name": "Miraj Cinemas Ticketing",
+  "description": "A premium, dark-themed cinema ticketing prototype for Miraj Cinemas, featuring a live seating matrix, city selection, discount verification, and an operations dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
